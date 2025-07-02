@@ -3,6 +3,7 @@ const cityRoutes = require('./city.routes');
 const attractionRoutes = require('./attraction.routes');
 const metadataRoutes = require('./metadata.routes');
 const exchangeRateRoutes = require('./exchangeRate.routes');
+const databaseHealthRoutes = require('./databaseHealth.routes');
 
 module.exports = (app) => {
   app.use('/api/countries', countryRoutes);
@@ -10,4 +11,5 @@ module.exports = (app) => {
   app.use('/api/attractions', attractionRoutes);
   app.use('/api/metadata', metadataRoutes);
   app.use('/api/exchange-rates', exchangeRateRoutes);
+  app.use('/api/database-health', databaseHealthRoutes);
 }; 
